@@ -20,13 +20,29 @@
         import { createRoot } from 'react-dom/client';
 
         const domNode = document.getElementById('app');
-        function Header() {
-            return <h2>Develop. Preview. Ship.</h2>;
+        function Header({ title }) {
+            console.log(title);
+            return <h1>{title ? title : 'Default title'}</h1>;
         }
+        // function HomePage() {
+        //     return (
+        //         <div>
+        //             <Header title="React" />
+        //             <Header title="A new title" />
+        //         </div>
+        //     );
+        // }
         function HomePage() {
+            const names = ['Index', 'Button', 'Link'];
+
             return (
                 <div>
-                    <Header />
+                    <Header title="Java. Flutter. Dart." />
+                    <ul>
+                        {names.map((name) => (
+                            <li key={name}>{name}</li>
+                        ))}
+                    </ul>
                 </div>
             );
         }
