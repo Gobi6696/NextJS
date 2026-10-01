@@ -23,8 +23,15 @@
         function Header() {
             return <h2>Develop. Preview. Ship.</h2>;
         }
+        function HomePage() {
+            return (
+                <div>
+                    <Header />
+                </div>
+            );
+        }
         const root = createRoot(domNode);
-        root.render(<Header />);
+        root.render(<HomePage />);
     </script>
 </body>
 
